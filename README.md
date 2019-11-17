@@ -2,7 +2,8 @@
 
 ```sh
 $ npm i
-$ python3 -m http.server 8000
+$ npm run build
+$ npm run serve
 ```
 
 # Dependency Graph
