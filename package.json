@@ -1,0 +1,44 @@
+{
+  "name": "steal-bundles",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/donkeybanana/steal-bundles"
+  },
+  "author": "Alan Burgoyne",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "jquery": "^3.4.1",
+    "steal": "^2.2.4",
+    "steal-css": "^1.3.2",
+    "steal-tools": "^2.2.3"
+  },
+  "steal": {
+    "meta": {
+      "jquery": {
+        "format": "global",
+        "exports": "$",
+        "build": false
+      }
+    },
+    "envs": {
+      "build-development": {
+        "map": {
+          "jquery": "@empty"
+        }
+      },
+      "window-production": {
+        "paths": {
+          "jquery": "https://code.jquery.com/jquery-3.4.1.min.js"
+        }
+      }
+    }
+  }
+}
